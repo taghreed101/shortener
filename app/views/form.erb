@@ -1,0 +1,11 @@
+<form action="<%=@page_address%>"  method="POST">
+    
+        <div class="form-group">
+         <input type="hidden" name="url_id" value="<%=@url_id%>" />
+            <label for="url-link">enter your long url in the box below</label>
+            <input type="text" class="form-control" id="url-link"  name="url"
+                placeholder="Enter Link">
+                    
+        </div>
+        <button type="submit" class="btn btn-primary">Shorten</button>
+    </form>

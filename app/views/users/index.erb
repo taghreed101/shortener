@@ -1,0 +1,31 @@
+
+  
+   
+ <div class="col-sm-12">
+   <h4><%=@user.name%>  Short Urls</h4>
+      <table class="table">
+             <tr>
+            <th>original url</th>
+            <th>shortened url</th>
+           <th>click_count</th>
+           <th>Update</th>
+            <th>Delete</th>
+        </tr>
+         <%  @url_list.each do |url| %>
+            <td><%=url.url%></td>
+            <td><%=url.short_url%></td>
+            <td><%=url.click_count%></td>
+            <td>  <a href="/urls/update/<%=url.id%>" class="btn btn-primary">Update</a></td>
+            <td> <a href="/urls/delete/<%=url.id%>" class="btn btn-primary">Delete</a></td>
+          </tr>
+        <% end %>
+        </table>
+      
+  </div>
+
+    
+
+
+
+
+

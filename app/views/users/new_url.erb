@@ -1,0 +1,24 @@
+
+
+<div class="col-sm-12">
+  
+<h3> Add New Url </h3>
+<h5><%=@user.name%></h5>
+
+
+<%=erb(:form, :layout => false) %>
+
+  <table class="table">
+             <tr>
+            <th>original url</th>
+            <th>shortened url</th>
+           
+        </tr>
+         <%  @url_list.each do |url| %>
+            <td><%=url.url%></td>
+            <td><%=url.short_url%></td>
+          </tr>
+        <% end %>
+        </table>
+  <label for="error"><%=@error%></label>   
+  </div>
