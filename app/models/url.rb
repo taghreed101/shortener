@@ -10,7 +10,7 @@ def generate_the_short_url
      new_url_binary= self.url.unpack("B*")
      new_url=Base58.int_to_base58(new_url_binary[0].to_i, :bitcoin).split("").sample(6).join
    
-    self.short_url =URI.join(ENV['BASE_URL']+new_url+"/")
+    self.short_url =URI.join(ENV['BASE_URL']+new_url)
 end
 
     
