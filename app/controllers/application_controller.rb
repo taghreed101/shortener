@@ -138,7 +138,7 @@ end
     @url_list=@user.urls
     redirect'/users/index',layout: :'/layouts/my_layout'
     else
-    @error=@url.errors.messages[:url]+ " :"+ params["url"]
+    @error=@url.errors.messages[:url][0]+ " :"+ params["url"]
     erb :'/users/update_url',layout: :'/layouts/my_layout'
     end
  
