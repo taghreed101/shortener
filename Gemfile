@@ -11,7 +11,9 @@ gem 'shotgun'
 gem 'byebug'
 gem 'bcrypt'
 gem 'base58'
-
+group :devlopment do
+gem 'dotenv'
+end
 group :test do
   gem 'launchy'
   gem 'rspec'
