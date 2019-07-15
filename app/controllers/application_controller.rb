@@ -66,7 +66,7 @@ class ApplicationController < Sinatra::Base
    user.password= params["password"]
    user.save
    session[:user_id] = user.id 
-   redirect 'users/home', layout: :'/layouts/my_layout'
+   redirect 'users/home'
   end
   
  # Renders the view page in app/views/sessions/login.erb
@@ -75,7 +75,7 @@ class ApplicationController < Sinatra::Base
     unless session[:user_id]
     erb :'/sessions/login', layout: :'/layouts/my_layout'
     else
-    redirect 'users/home' , layout: :'/layouts/my_layout' 
+    redirect 'users/home'
     end
 end
 
