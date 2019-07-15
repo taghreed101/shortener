@@ -61,13 +61,12 @@ class ApplicationController < Sinatra::Base
 
   # Handles the POST request when user submits the Sign Up form. Get user info from the params hash, creates a new user, signs them in, redirects them. 
   post '/registrations' do
-   
    user = User.new(name: params["name"], email: params["email"])
    #byebug
    user.password= params["password"]
    user.save
    session[:user_id] = user.id 
-   redirect 'users/home' , layout: :'/layouts/my_layout'
+   redirect 'users/home', layout: :'/layouts/my_layout'
   end
   
  # Renders the view page in app/views/sessions/login.erb
