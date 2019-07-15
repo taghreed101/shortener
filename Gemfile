@@ -11,8 +11,8 @@ gem 'shotgun'
 gem 'byebug'
 gem 'bcrypt'
 gem 'base58'
-group :devlopment do
-gem 'dotenv'
+group :development do
+  gem 'dotenv'
 end
 group :test do
   gem 'launchy'
