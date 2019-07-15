@@ -87,9 +87,9 @@ end
     if user.password==params["password"]
     # unless user.nil?
     session[:user_id] = user.id
-    redirect 'users/home' , layout: :'/layouts/my_layout'
+    redirect 'users/home' 
     else
-      redirect 'sessions/login' , layout: :'/layouts/my_layout'
+      redirect 'sessions/login' 
     end
   end
 #----------------------------------------------------------------------------------
@@ -135,7 +135,7 @@ end
    # byebug
     if @url.valid?  
     @url_list=@user.urls
-    redirect'/users/index',layout: :'/layouts/my_layout'
+    redirect'/users/index'
     else
     @error=@url.errors.messages[:url][0]+ " :"+ params["url"]
     erb :'/users/update_url',layout: :'/layouts/my_layout'
