@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
 
   #redirection
    get '/:url' do
-   @url=Url.find_by(short_url: ENV['BASE_URL'] + params["url"])
+   @url=Url.find_by(short_url: ENV['BASE_URL'] + params["url"]+"/")
   # byebug
     unless @url.nil?
       @url.click_count += 1
